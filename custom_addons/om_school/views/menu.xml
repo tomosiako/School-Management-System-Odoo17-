@@ -10,7 +10,116 @@
     />
     <menuitem id="menu_students"
               name="students"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+
+
+
+    <menuitem id="menu_student"
+              name="students"
               parent="menu_admission"
+              action="action_school_student"
+    />
+
+    <menuitem id="menu_guardian"
+              name="Guardian"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+
+
+
+
+      <menuitem id="menu_academics"
+              name="Academics"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+      <menuitem id="menu_timetable"
+              name="Time Tables"
+              parent="menu_academics"
+              action="action_school_student"
+    />
+      <menuitem id="menu_subject"
+              name="Subjects"
+              parent="menu_academics"
+              action="action_school_student"
+    />
+      <menuitem id="menu_class"
+              name="Class"
+              parent="menu_academics"
+              action="action_school_student"
+    />
+      <menuitem id="menu_exams"
+              name="Examinations"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+     <menuitem id="menu_examinations"
+              name="Examinations"
+              parent="menu_exams"
+              action="action_school_student"
+    />
+     <menuitem id="menu_reportcard"
+              name="Report Cards"
+              parent="menu_exams"
+              action="action_school_student"
+    />
+      <menuitem id="menu_communications"
+              name="Communications"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+     <menuitem id="menu_attendance"
+              name="Attendance"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_hr"
+              name="HR"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+
+
+
+    <menuitem id="menu_employees"
+              name="Employees"
+              parent="menu_school_root"
+              action="action_school_employee"
+  />
+
+    <menuitem id="menu_finance"
+              name="Finance"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_sms_invoicing"
+              name="Invoice"
+              action="action_school_student"
+              parent="menu_finance"
+    />
+    <menuitem id="menu_sms_payment"
+              name="Payment"
+              action="action_school_student"
+              parent="menu_finance"
+    />
+
+
+    <menuitem id="menu_configurations"
+              name="Configurations"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_tags"
+              name="Tags"
+              parent="menu_configurations"
+              action="action_school_student"
+    />
+    <menuitem id="menu_activities"
+              name="Activities"
+              parent="menu_configurations"
               action="action_school_student"
     />
 </odoo>
