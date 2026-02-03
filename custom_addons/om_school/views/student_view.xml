@@ -5,9 +5,12 @@
         <field name="model">school.student</field>
         <field name="arch" type="xml">
             <tree string="Students">
+                <field name="reference" readonly="True"/>
                 <field name="name"/>
                 <field name="date_of_birth" optional="show"/>
                 <field name="gender" optional="hide"/>
+                <field name="guardian" optional="hide"/>
+
             </tree>
         </field>
     </record>
@@ -19,11 +22,13 @@
                 <sheet>
                     <group>
                         <group>
+                            <field name="reference" readonly="True"/>
                             <field name="name"/>
                             <field name="date_of_birth"/>
                         </group>
                         <group>
                             <field name="gender"/>
+                            <field name="guardian"/>
                         </group>
                     </group>
                 </sheet>

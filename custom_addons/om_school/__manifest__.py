@@ -8,10 +8,12 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "data/sequence.xml",
         "views/subject_view.xml",
         "views/guardian_view.xml",
         "views/student_view.xml",
         "views/student_readonly_view.xml",
+        "views/meeting_view.xml",
         "views/employee_view.xml",
         "views/menu.xml"
     ]

@@ -3,3 +3,4 @@ access_school_student,access.school.student,model_school_student,base.group_user
 access_school_employee,access.school.employee,model_school_employee,base.group_user,1,1,1,1
 access_school_guardian,access.school.guardian,model_school_guardian,base.group_user,1,1,1,1
 access_school_subject,access.school.subject,model_school_subject,base.group_user,1,1,1,1
+access_school_meeting,access.school.meeting,model_school_meeting,base.group_user,1,1,1,1

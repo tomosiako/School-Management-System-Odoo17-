@@ -71,6 +71,11 @@
               parent="menu_school_root"
               action="action_school_student"
     />
+     <menuitem id="menu_meetings"
+              name="Meeting"
+              parent="menu_communications"
+              action="action_school_meeting"
+    />
      <menuitem id="menu_attendance"
               name="Attendance"
               parent="menu_school_root"

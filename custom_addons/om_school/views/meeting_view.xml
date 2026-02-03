@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <record id="view_school_meeting_tree" model="ir.ui.view">
+        <field name="name">school.meeting.tree</field>
+        <field name="model">school.meeting</field>
+        <field name="arch" type="xml">
+            <tree string="Meetings">
+                <field name="reference"/>
+                <field name="employee_id"/>
+                <field name="date_meeting" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_school_meeting_form" model="ir.ui.view">
+        <field name="name">school.meeting.form</field>
+        <field name="model">school.meeting</field>
+        <field name="arch" type="xml">
+            <form string="Meetings">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="reference" readonly="True"/>
+                            <field name="employee_id"/>
+                            <field name="date_meeting"/>
+                        </group>
+                        <group>
+                            <field name="note"/>
+
+                        </group>
+
+
+                    </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+
+
+    </record>
+
+
+    <record id="action_school_meeting" model="ir.actions.act_window">
+        <field name="name">Meeting</field>
+        <field name="res_model">school.meeting</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new meeting
+            </p>
+        </field>
+
+    </record>
+
+</odoo>
