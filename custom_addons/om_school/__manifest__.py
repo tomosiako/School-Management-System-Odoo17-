@@ -8,6 +8,8 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "views/subject_view.xml",
+        "views/guardian_view.xml",
         "views/student_view.xml",
         "views/student_readonly_view.xml",
         "views/employee_view.xml",

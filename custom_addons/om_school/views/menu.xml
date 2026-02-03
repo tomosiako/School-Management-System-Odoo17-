@@ -25,7 +25,7 @@
     <menuitem id="menu_guardian"
               name="Guardian"
               parent="menu_school_root"
-              action="action_school_student"
+              action="action_school_guardian"
     />
 
 
@@ -44,7 +44,7 @@
       <menuitem id="menu_subject"
               name="Subjects"
               parent="menu_academics"
-              action="action_school_student"
+              action="action_school_subject"
     />
       <menuitem id="menu_class"
               name="Class"
