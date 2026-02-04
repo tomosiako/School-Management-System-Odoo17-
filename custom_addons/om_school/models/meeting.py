@@ -10,6 +10,10 @@ class SchoolMeeting(models.Model):
     employee_id = fields.Many2one('school.employee', sytring="Employee")
     date_meeting = fields.Date(string="Date")
     note = fields.Text(string="Note")
+    state = fields.Selection([
+        ('draft','Draft'),('confirmed','Confirmed'),('ongoing','Ongoing'),
+        ('done','Done'),('canceled','Cancelled')
+    ],default="draft",tracking = True)
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -17,3 +21,20 @@ class SchoolMeeting(models.Model):
             if not vals.get('reference') or vals['reference'] == 'New':
                 vals['reference'] = self.env['ir.sequence'].next_by_code('school.meeting')
             return super().create(vals_list)
+
+    def action_confirm(self):
+        for rec in self:
+            rec.state="confirmed"
+
+
+    def action_ongoing(self):
+        for rec in self:
+            rec.state = "ongoing"
+
+    def action_done(self):
+        for rec in self:
+            rec.state = "done"
+
+    def action_cancel(self):
+        for rec in self:
+            rec.state = "canceled"
