@@ -18,12 +18,27 @@ class SchoolMeeting(models.Model):
     ],default="draft",tracking = True)
     members = fields.Many2many('school.employee', string="Meeting Member")
 
+
+    # computed field testing variable
+
+    a = fields.Integer(string="Quantity")
+    b = fields.Integer(string="price")
+    #b = fields.Float(string="Price")
+
+    total_quantity = fields.Float(compute='_compute_total_quantity',string='Total Quantity',stored=True)
+
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
             if not vals.get('reference') or vals['reference'] == 'New':
                 vals['reference'] = self.env['ir.sequence'].next_by_code('school.meeting')
             return super().create(vals_list)
+
+    def _compute_total_quantity(self):
+        for rec in self:
+           total_qty =0
+           total_qty=rec.a+rec.b
+           rec.total_quantity =total_qty
 
     def action_confirm(self):
         for rec in self:
