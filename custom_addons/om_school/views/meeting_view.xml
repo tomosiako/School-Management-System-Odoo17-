@@ -22,11 +22,11 @@
                 <header>
                     <button name="action_confirm" type="object" string="Confirm"
                             invisible="state != 'draft'" class="oe_highlight"/>
-                     <button name="action_ongoing" type="object" string="Ongoing"
-                             invisible="state != 'confirmed'" class="oe_highlight"/>
-                     <button name="action_done" type="object" string="Done"
-                             invisible="state != 'ongoing'" class="oe_highlight"/>
-                     <button name="action_cancel" type="object" string="Cancel" invisible="state == 'done'"/>
+                    <button name="action_ongoing" type="object" string="Ongoing"
+                            invisible="state != 'confirmed'" class="oe_highlight"/>
+                    <button name="action_done" type="object" string="Done"
+                            invisible="state != 'ongoing'" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state == 'done'"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,ongoing,done"/>
                 </header>
                 <sheet>
@@ -37,12 +37,22 @@
                             <field name="date_meeting"/>
                         </group>
                         <group>
+                            <field name="members" widget="many2many_tags"/>
                             <field name="note"/>
-
+                            <field name="time"/>
                         </group>
-
-
                     </group>
+                    <notebook>
+                        <page name="meeting_info" string="About">
+                            <group>
+                                <field name="time"/>
+                                <field name="note"/>
+                            </group>
+                        </page>
+                        <page string="Members">
+                            <field name="members"/>
+                        </page>
+                    </notebook>
 
                 </sheet>
                 <div class="oe_chatter">

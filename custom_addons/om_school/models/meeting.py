@@ -9,11 +9,13 @@ class SchoolMeeting(models.Model):
     reference = fields.Char(string='Reference', default='New')
     employee_id = fields.Many2one('school.employee', sytring="Employee")
     date_meeting = fields.Date(string="Date")
+    time = fields.Datetime(string="Scheduled Date")
     note = fields.Text(string="Note")
     state = fields.Selection([
         ('draft','Draft'),('confirmed','Confirmed'),('ongoing','Ongoing'),
         ('done','Done'),('canceled','Cancelled')
     ],default="draft",tracking = True)
+    members = fields.Many2many('school.employee', string="Meeting Member")
 
     @api.model_create_multi
     def create(self, vals_list):
