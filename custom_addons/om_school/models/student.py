@@ -10,6 +10,10 @@ class SchoolStudent(models.Model):
     gender = fields.Selection([('male','Male'),('female','Female')],string="Gender", tracking=True)
     guardian = fields.Many2one('school.guardian',String="Guardian")
     reference = fields.Char(string='Reference', default='New')
+    # tag_ids = fields.Many2many(
+    #     'student.tag','student_teg_rel','student_id','tag_id',string="Tags")               #defining the table column manual but the below line lets odoo do it automatically
+    tag_ids = fields.Many2many('student.tag', string="Tags")
+    subject = fields.Many2many('school.subject', string="Subjects Undertaken")
 
     @api.model_create_multi
     def create(self, vals_list):

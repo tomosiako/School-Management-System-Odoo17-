@@ -2,6 +2,7 @@
 <odoo>
     <menuitem id="menu_school_root"
               name="SMS"
+              web_icon="om_school,static/description/school.png"
               sequence="35"
     />
     <menuitem id="menu_admission"
@@ -120,7 +121,7 @@
     <menuitem id="menu_tags"
               name="Tags"
               parent="menu_configurations"
-              action="action_school_student"
+              action="action_student_tag"
     />
     <menuitem id="menu_activities"
               name="Activities"

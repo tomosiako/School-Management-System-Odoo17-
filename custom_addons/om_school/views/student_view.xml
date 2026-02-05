@@ -10,6 +10,8 @@
                 <field name="date_of_birth" optional="show"/>
                 <field name="gender" optional="hide"/>
                 <field name="guardian" optional="hide"/>
+                 <field name="tag_ids" optional="hide"/>
+                <field name="subject" optional="hide"/>
 
             </tree>
         </field>
@@ -29,6 +31,8 @@
                         <group>
                             <field name="gender"/>
                             <field name="guardian"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                             <field name="subject" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>

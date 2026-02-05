@@ -15,6 +15,7 @@
         "views/student_readonly_view.xml",
         "views/meeting_view.xml",
         "views/employee_view.xml",
+        "views/student_tag_view.xml",
         "views/menu.xml"
     ]
 }
