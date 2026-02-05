@@ -4,6 +4,7 @@ class SchoolMeeting(models.Model):
     _name = 'school.meeting'
     _inherit = ['mail.thread']
     _description = 'School Meeting'
+    _rec_names_search = ['reference','employee_id']
     _rec_name = 'employee_id'
 
     reference = fields.Char(string='Reference', default='New')
