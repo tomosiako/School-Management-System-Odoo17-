@@ -9,6 +9,7 @@ class SchoolMeeting(models.Model):
 
     reference = fields.Char(string='Reference', default='New')
     employee_id = fields.Many2one('school.employee', sytring="Employee")
+    date_of_birth= fields.Date(string="DOB",related="employee_id.date_of_birth",stored=True)
     date_meeting = fields.Date(string="Date")
     time = fields.Datetime(string="Scheduled Date")
     note = fields.Text(string="Note")
