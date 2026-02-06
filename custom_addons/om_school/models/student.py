@@ -21,3 +21,8 @@ class SchoolStudent(models.Model):
             if not vals.get('reference') or vals['reference'] == 'New':
                 vals['reference'] = self.env['ir.sequence'].next_by_code('school.student')
             return super().create(vals_list)
+
+    def unlink(self):
+        # can perform anything here
+        print("Supper method is executed")
+        return super().unlink()
