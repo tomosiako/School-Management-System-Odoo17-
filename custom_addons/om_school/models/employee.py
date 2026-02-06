@@ -1,4 +1,5 @@
-from odoo import api, fields, models
+from odoo import api, fields, models,_
+from odoo.exceptions import ValidationError,UserError
 
 class SchoolEmployee(models.Model):
     _name = 'school.employee'
@@ -10,3 +11,12 @@ class SchoolEmployee(models.Model):
     gender = fields.Selection([('male','Male'),('female','Female')],string="Gender",tracking=True)
     id_number = fields.Char(string="ID Number",required=True,tracking=True)
     phone_number = fields.Char(string="Phone Number", required=True,tracking=True)
+
+    def unlink(self):
+        # can perform anything here
+        for rec in self:
+            domain = [('employee_id','=', rec.id)]
+            appointments= self.env['school.meeting'].search(domain)
+            if appointments:
+                raise UserError(_("You can not delete the employee now. \nA meeting exists under this name: %s" % rec.name))
+        return super().unlink()
