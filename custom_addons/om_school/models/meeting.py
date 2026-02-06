@@ -8,7 +8,7 @@ class SchoolMeeting(models.Model):
     _rec_name = 'employee_id'
 
     reference = fields.Char(string='Reference', default='New')
-    employee_id = fields.Many2one('school.employee', sytring="Employee")
+    employee_id = fields.Many2one('school.employee', sytring="Employee",required=True,ondelete='restrict')  # ondelete="cascade' will delete the emloyee with the scheduled meeting underthe employee , ondelete="set null" will delete the employee but the name field in the schedule meeting will remain null/ the meeting scheduled wont be deleted
     date_of_birth= fields.Date(string="DOB",related="employee_id.date_of_birth",stored=True)
     date_meeting = fields.Date(string="Date")
     time = fields.Datetime(string="Scheduled Date")
