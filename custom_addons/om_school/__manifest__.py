@@ -7,6 +7,7 @@
         'mail'
     ],
     "data": [
+        "security/security.xml",
         "security/ir.model.access.csv",
         "data/sequence.xml",
         "views/subject_view.xml",

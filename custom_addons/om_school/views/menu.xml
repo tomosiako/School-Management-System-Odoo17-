@@ -7,6 +7,7 @@
     />
     <menuitem id="menu_admission"
               name="Admission"
+              groups="om_school.group_school_management"
               parent="menu_school_root"
     />
     <menuitem id="menu_students"

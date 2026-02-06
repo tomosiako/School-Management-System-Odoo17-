@@ -9,6 +9,7 @@
                 <field name="id_number" optional="show"/>
                 <field name="phone_number" optional="hide"/>
                 <field name="gender" optional="hide"/>
+                  <field name="create_uid" optional="hide" groups="om_school.group_school_management"/>
                 <field name="date_of_birth"/>
             </tree>
         </field>
@@ -28,6 +29,7 @@
                             <field name="gender"/>
                             <field name="phone_number"/>
                             <field name="date_of_birth"/>
+                            <field name="create_uid" groups="om_school.group_school_management"/>
                         </group>
                     </group>
                 </sheet>
