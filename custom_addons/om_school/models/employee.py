@@ -12,11 +12,22 @@ class SchoolEmployee(models.Model):
     id_number = fields.Char(string="ID Number",required=True,tracking=True)
     phone_number = fields.Char(string="Phone Number", required=True,tracking=True)
 
-    def unlink(self):
-        # can perform anything here
+    # def unlink(self):
+    #     # can perform anything here
+    #     for rec in self:
+    #         domain = [('employee_id','=', rec.id)]
+    #         appointments= self.env['school.meeting'].search(domain)
+    #         if appointments:
+    #             raise UserError(_("You can not delete the employee now. \nA meeting exists under this name: %s" % rec.name))
+    #     return super().unlink()
+
+
+
+    @api.ondelete(at_uninstall=False)  #this code serves the same purpose as the above code
+    def _check_employee_meeting(self):
         for rec in self:
-            domain = [('employee_id','=', rec.id)]
-            appointments= self.env['school.meeting'].search(domain)
+            domain = [('employee_id', '=', rec.id)]
+            appointments = self.env['school.meeting'].search(domain)
             if appointments:
-                raise UserError(_("You can not delete the employee now. \nA meeting exists under this name: %s" % rec.name))
-        return super().unlink()
+                raise UserError(
+                    _("You can not delete the employee now. \nA meeting exists under this name: %s" % rec.name))
