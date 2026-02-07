@@ -9,6 +9,10 @@
                 <field name="guardian_name"/>
                 <field name="student_name"/>
             </xpath>
+
+             <xpath expr="//group[@name='accounting_infor_group']/field[@name='auto_post']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
         </field>
     </record>
 
