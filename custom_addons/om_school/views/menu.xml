@@ -17,7 +17,6 @@
     />
 
 
-
     <menuitem id="menu_student"
               name="students"
               parent="menu_admission"
@@ -31,54 +30,52 @@
     />
 
 
-
-
-      <menuitem id="menu_academics"
+    <menuitem id="menu_academics"
               name="Academics"
               parent="menu_school_root"
               action="action_school_student"
     />
-      <menuitem id="menu_timetable"
+    <menuitem id="menu_timetable"
               name="Time Tables"
               parent="menu_academics"
               action="action_school_student"
     />
-      <menuitem id="menu_subject"
+    <menuitem id="menu_subject"
               name="Subjects"
               parent="menu_academics"
               action="action_school_subject"
     />
-      <menuitem id="menu_class"
+    <menuitem id="menu_class"
               name="Class"
               parent="menu_academics"
               action="action_school_student"
     />
-      <menuitem id="menu_exams"
+    <menuitem id="menu_exams"
               name="Examinations"
               parent="menu_school_root"
               action="action_school_student"
     />
-     <menuitem id="menu_examinations"
+    <menuitem id="menu_examinations"
               name="Examinations"
               parent="menu_exams"
               action="action_school_student"
     />
-     <menuitem id="menu_reportcard"
+    <menuitem id="menu_reportcard"
               name="Report Cards"
               parent="menu_exams"
               action="action_school_student"
     />
-      <menuitem id="menu_communications"
+    <menuitem id="menu_communications"
               name="Communications"
               parent="menu_school_root"
               action="action_school_student"
     />
-     <menuitem id="menu_meetings"
+    <menuitem id="menu_meetings"
               name="Meeting"
               parent="menu_communications"
               action="action_school_meeting"
     />
-     <menuitem id="menu_attendance"
+    <menuitem id="menu_attendance"
               name="Attendance"
               parent="menu_school_root"
               action="action_school_student"
@@ -90,12 +87,11 @@
     />
 
 
-
     <menuitem id="menu_employees"
               name="Employees"
               parent="menu_school_root"
               action="action_school_employee"
-  />
+    />
 
     <menuitem id="menu_finance"
               name="Finance"
@@ -104,12 +100,12 @@
     />
     <menuitem id="menu_sms_invoicing"
               name="Invoice"
-              action="action_school_student"
+              action="account.action_move_out_invoice_type"
               parent="menu_finance"
     />
     <menuitem id="menu_sms_payment"
               name="Payment"
-              action="action_school_student"
+              action="account.action_account_payments"
               parent="menu_finance"
     />
 
