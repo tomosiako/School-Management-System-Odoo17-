@@ -10,7 +10,7 @@
                 <field name="date_of_birth" optional="show"/>
                 <field name="gender" optional="hide"/>
                 <field name="guardian" optional="hide"/>
-                 <field name="tag_ids" optional="hide"/>
+                <field name="tag_ids" optional="hide"/>
                 <field name="subject" optional="hide"/>
 
             </tree>
@@ -34,7 +34,7 @@
                             <field name="gender"/>
                             <field name="guardian"/>
                             <field name="tag_ids" widget="many2many_tags"/>
-                             <field name="subject" widget="many2many_tags"/>
+                            <field name="subject" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>
@@ -43,6 +43,31 @@
                     <field name="message_ids"/>
                 </div>
             </form>
+        </field>
+    </record>
+
+
+    <record id="view_school_student_search" model="ir.ui.view">
+        <field name="name">school.student.search</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <search string="Students">
+                <field name="reference" readonly="True"/>
+                <field name="name"/>
+                <field name="date_of_birth" optional="show"/>
+                <field name="gender" optional="hide"/>
+                <field name="guardian" optional="hide"/>
+                <filter string="Male" name="male_patients" domain="[('gender','=','male')]"/>
+                <!-- <separator/> -->
+                <filter string="Female" name="female_patients" domain="[('gender','=','female')]"/>
+                <group expand="1" string="Group By">
+                    <filter name="group_by_gender" string="Gender" context="{'group_by' : 'gender'}"/>
+                </group>
+                <searchpanel>
+                    <field name="gender" string="Gender" enable_counters="1"/>
+                </searchpanel>
+
+            </search>
         </field>
     </record>
 

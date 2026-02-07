@@ -41,6 +41,24 @@
         </field>
     </record>
 
+
+    <record id="view_school_employee_search" model="ir.ui.view">
+        <field name="name">school.employee.search</field>
+        <field name="model">school.employee</field>
+        <field name="arch" type="xml">
+            <search string="Students">
+                <field name="id_number" readonly="True"/>
+                <field name="name"/>
+                <field name="date_of_birth" optional="show"/>
+                <field name="gender" optional="hide"/>
+                <field name="phone_number" optional="hide"/>
+                <group expand="1" string="Group By">
+                    <filter name="group_by_employee" string="Employee" context="{'group_by' : 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
     <record id="action_school_employee" model="ir.actions.act_window">
         <field name="name">Employee</field>
         <field name="res_model">school.employee</field>
