@@ -18,6 +18,7 @@
         "views/meeting_view.xml",
         "views/employee_view.xml",
         "views/student_tag_view.xml",
+        "views/account_move_views.xml",
         "views/menu.xml"
     ]
 }
