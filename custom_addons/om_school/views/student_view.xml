@@ -27,6 +27,8 @@
                             <field name="reference" readonly="True"/>
                             <field name="name"/>
                             <field name="date_of_birth"/>
+                            <field name="is_disabled"/>
+                            <field name="description" invisible="not is_disabled" required="is_disabled"/>
                         </group>
                         <group>
                             <field name="gender"/>
