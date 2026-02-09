@@ -54,5 +54,22 @@
             <field name="groups" eval="[Command.set([ref('om_school.group_school_management')])]"/>
             <field name="domain_force">[]</field>
         </record>
+
+
+
+<!--        <record id="teacher_own_appointment_rule" model="ir.rule">-->
+<!--            <field name="name">teacher: view own records</field>-->
+<!--            <field name="model_id" ref="model_school_lesson"/>-->
+<!--            <field name="groups" eval="[Command.set([ref('om_school.group_school_teacher')])]"/>-->
+<!--            <field name="domain_force">[('teacher.name', '=', user.name)]</field>-->
+
+<!--        </record>-->
+
+<!--         <record id="manager_viewall_appointment_rule" model="ir.rule">-->
+<!--            <field name="name">manager: view all records</field>-->
+<!--            <field name="model_id" ref="model_school_employee"/>-->
+<!--            <field name="groups" eval="[Command.set([ref('om_school.group_school_management')])]"/>-->
+<!--            <field name="domain_force">[]</field>-->
+<!--        </record>-->
     </data>
 </odoo>

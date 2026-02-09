@@ -11,6 +11,8 @@ class SchoolEmployee(models.Model):
     gender = fields.Selection([('male','Male'),('female','Female')],string="Gender",tracking=True)
     id_number = fields.Char(string="ID Number",required=True,tracking=True)
     phone_number = fields.Char(string="Phone Number", required=True,tracking=True)
+    is_teacher = fields.Boolean(string='Teacher')
+    subject = fields.Many2many('school.subject', string="Subjects Taught")
 
     # def unlink(self):
     #     # can perform anything here

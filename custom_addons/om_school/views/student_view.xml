@@ -12,6 +12,7 @@
                 <field name="guardian" optional="hide"/>
                 <field name="tag_ids" optional="hide"/>
                 <field name="subject" optional="hide"/>
+                <field name="class_id" optional="hide"/>
 
             </tree>
         </field>
@@ -32,6 +33,7 @@
                         </group>
                         <group>
                             <field name="gender"/>
+                            <field name="class_id"/>
                             <field name="guardian"/>
                             <field name="tag_ids" widget="many2many_tags"/>
                             <field name="subject" widget="many2many_tags"/>
@@ -56,6 +58,7 @@
                 <field name="name"/>
                 <field name="date_of_birth" optional="show"/>
                 <field name="gender" optional="hide"/>
+                <field name="class_id" optional="hide"/>
                 <field name="guardian" optional="hide"/>
                 <filter string="Male" name="male_patients" domain="[('gender','=','male')]"/>
                 <!-- <separator/> -->

@@ -48,22 +48,22 @@
     <menuitem id="menu_class"
               name="Class"
               parent="menu_academics"
-              action="action_school_student"
-    />
-    <menuitem id="menu_exams"
-              name="Examinations"
-              parent="menu_school_root"
-              action="action_school_student"
+              action="action_school_level"
     />
     <menuitem id="menu_examinations"
               name="Examinations"
-              parent="menu_exams"
+              parent="menu_academics"
               action="action_school_student"
     />
     <menuitem id="menu_reportcard"
               name="Report Cards"
-              parent="menu_exams"
+              parent="menu_academics"
               action="action_school_student"
+    />
+     <menuitem id="menu_lesson"
+              name="Lessons"
+              parent="menu_academics"
+              action="action_school_lesson"
     />
     <menuitem id="menu_communications"
               name="Communications"
@@ -82,19 +82,22 @@
     />
     <menuitem id="menu_hr"
               name="HR"
+              groups="om_school.group_school_management"
               parent="menu_school_root"
-              action="action_school_student"
+
     />
 
 
     <menuitem id="menu_employees"
               name="Employees"
-              parent="menu_school_root"
+              groups="om_school.group_school_management"
+              parent="menu_hr"
               action="action_school_employee"
     />
 
     <menuitem id="menu_finance"
               name="Finance"
+              groups="om_school.group_school_management"
               parent="menu_school_root"
               action="action_school_student"
     />
@@ -112,6 +115,7 @@
 
     <menuitem id="menu_configurations"
               name="Configurations"
+              groups="om_school.group_school_management"
               parent="menu_school_root"
               action="action_school_student"
     />
@@ -122,7 +126,7 @@
     />
     <menuitem id="menu_activities"
               name="Activities"
-              parent="menu_configurations"
-              action="action_school_student"
+              parent="menu_school_root"
+              action="action_school_activity"
     />
 </odoo>

@@ -19,6 +19,9 @@
         "views/employee_view.xml",
         "views/student_tag_view.xml",
         "views/account_move_views.xml",
+        "views/level_view.xml",
+        "views/lesson_view.xml",
+        "views/activities_view.xml",
         "views/menu.xml"
     ]
 }
